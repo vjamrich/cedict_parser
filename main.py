@@ -16,11 +16,11 @@ def main():
     print("Loading vocabulary...")
     entries = load_cedict()
 
-    print("Removing variants...")
-    entries = remove_variants(entries)
-
     print("Simplifying entries...")
     entries = simplify_entries(entries)
+
+    print("Removing variants...")
+    entries = remove_variants(entries)
 
     print("Appending HSK levels...")
     append_hsk(entries)
@@ -36,7 +36,7 @@ def main():
     # save_cedict(entries, f"output/{timestamp}", "dict")
 
     print("Generating vocabulary sounds...")
-    generate_sounds(entries)
+    # generate_sounds(entries)
 
     print("Generating example sentence sounds...")
     # TODO
